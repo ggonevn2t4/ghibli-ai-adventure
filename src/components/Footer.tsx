@@ -129,7 +129,10 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="text-center md:text-right">
               <p className="font-ghibli-body text-muted-foreground text-sm">
-                📞 Hotline: 1900-AI-MAGIC
+                📞 Zalo/Phone: 0708684608
+              </p>
+              <p className="font-ghibli-body text-muted-foreground text-sm">
+                📍 Landmark 81, Quận Bình Thạnh, TPHCM
               </p>
               <p className="font-ghibli-body text-muted-foreground text-sm">
                 ✉️ hello@aimastery.ghibli
