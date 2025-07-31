@@ -2,57 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Studio Ghibli & AI Magic Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* Ghibli Magic Color Palette */
+    --sky-blue: 194 57% 73%;           /* #87CEEB - Bầu trời trong xanh */
+    --forest-green: 77 34% 54%;        /* #9CBB58 - Cây cối xanh tươi */
+    --sunset-orange: 35 100% 64%;      /* #FFB347 - Hoàng hôn ấm áp */
+    --cloud-white: 208 100% 97%;       /* #F0F8FF - Mây trắng mềm mại */
+    --magic-purple: 300 43% 72%;       /* #DDA0DD - Tím ma thuật nhẹ nhàng */
+    --earth-brown: 39 49% 68%;         /* #D2B48C - Đất nâu tự nhiên */
+    
+    /* Enhanced Ghibli Variations */
+    --sky-blue-light: 194 57% 85%;
+    --sky-blue-dark: 194 57% 45%;
+    --forest-green-light: 77 34% 75%;
+    --sunset-orange-light: 35 100% 80%;
+    --magic-purple-light: 300 43% 85%;
+    --earth-brown-light: 39 49% 85%;
+    
+    /* Magical Gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(var(--sky-blue)), hsl(var(--sunset-orange)));
+    --gradient-forest: linear-gradient(135deg, hsl(var(--forest-green)), hsl(var(--sky-blue)));
+    --gradient-magic: linear-gradient(135deg, hsl(var(--magic-purple)), hsl(var(--sunset-orange)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset-orange)), hsl(var(--magic-purple)));
+    
+    /* Magic Shadows & Glows */
+    --shadow-magic: 0 10px 30px -5px hsl(var(--magic-purple) / 0.3);
+    --shadow-sunset: 0 10px 30px -5px hsl(var(--sunset-orange) / 0.3);
+    --glow-magic: 0 0 30px hsl(var(--magic-purple) / 0.4);
+    --glow-sky: 0 0 40px hsl(var(--sky-blue) / 0.4);
+    
+    /* Smooth Ghibli Animations */
+    --transition-magic: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-float: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    /* Semantic Token Mapping */
+    --background: var(--cloud-white);
     --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
+    
+    --card: var(--cloud-white);
     --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
+    
+    --popover: var(--cloud-white);
     --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
+    
+    --primary: var(--sky-blue);
+    --primary-foreground: var(--cloud-white);
+    
+    --secondary: var(--forest-green);
+    --secondary-foreground: var(--cloud-white);
+    
+    --muted: var(--earth-brown-light);
     --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    
+    --accent: var(--sunset-orange);
+    --accent-foreground: var(--cloud-white);
+    
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: var(--cloud-white);
+    
+    --border: var(--earth-brown-light);
+    --input: var(--earth-brown-light);
+    --ring: var(--magic-purple);
+    
+    --radius: 1rem;
   }
 
   .dark {
